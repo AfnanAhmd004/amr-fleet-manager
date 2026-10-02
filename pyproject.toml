@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = ""
+version = "0.1.0"
+description = "Warehouse AMR fleet manager: task allocation, multi-agent path finding, battery management and KPIs"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Afnan Ahmed Adil" }]
+dependencies = ["numpy", "scipy", "matplotlib"]
+
+[project.optional-dependencies]
+dev = ["pytest>=7"]
+
+[tool.setuptools]
+packages = ["fleet"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
